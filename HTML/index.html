@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/images/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <title>Coding Conf 2026 | Home</title>
+</head>
+<body>
+  <!-- skip link so keyboard users can jump straight past the header -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- header with the logo and the nav links -->
+  <header class="site-header">
+    <a href="index.html" aria-label="Coding Conf home">
+      <img src="../assets/images/logo-full.svg" alt="Coding Conf" width="209" height="30">
+    </a>
+    <!-- actual main navigation, the aria-label tells possible screen readers what it is -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+
+        <li><a href="index.html">Home</a></li>
+     <li><a href="login.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- main part of the page, the skip link would jumps here -->
+<main id="main" class="page">
+    <!-- hero section- event title, date, location and the register button -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Coding Conf <span class="highlight">2026</span> is Coming!</h1>
+      <p class="lead">Join developers from across the Caribbean for a day of talks, workshops and networking.</p>
+<!-- event date and location -->
+<ul class="meta-list">
+      <li><strong>Date:</strong> October 26, 2026</li>
+        <li><strong>Location:</strong> Papine, Kgn</li>
+  </ul>
+      <!-- takes the user to the registration form -->
+      <a class="btn" href="login.html">Register Now</a>
+    </section>
+
+    <!-- glass card thing telling people what to expect at the event -->
+    <section class="glass info" aria-labelledby="about-title">
+      <h2 id="about-title">What to expect</h2>
+      <ul class="info-list">
+       
+        <li>Keynotes on modern web development</li>
+        <li>Hands-on HTML, CSS and JavaScript workshops</li>
+    <li>Networking with students and industry mentors</li>
+
+      </ul>
+    </section>
+  </main>
+
+  <!-- footer same on every page -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Coding Conf. CIT2011 IA#2.</p>
+  </footer>
+</body>
+</html>

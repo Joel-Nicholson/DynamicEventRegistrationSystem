@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Coding Conf 2026 | Your Ticket</title>
+</head>
+<body>
+  <!-- skip link so keyboard users can jump straight past the header again -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- header with the logo and the nav links agian-->
+  <header class="site-header">
+    <a href="index.html" aria-label="Coding Conf home">
+      <img src="../assets/images/logo-full.svg" alt="Coding Conf" width="209" height="30">
+    </a>
+    <!-- main navigation again-->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main part of the page, the skip link jumps here again -->
+  <main id="main" class="page">
+    <!-- success message, the name and email are empty here and ticket.js fills them in -->
+    <section class="hero" aria-labelledby="ticket-title">
+
+      <h1 id="ticket-title">Congrats, <span class="highlight" id="t-name-heading"></span>!<br>Your ticket is ready.</h1>
+  <p class="lead">We've emailed your ticket to <span class="accent" id="t-email"></span> and will send updates in the run up to the event.</p>
+    </section>
+
+    <!-- the ticket itself (glass effect on it ), all the details are filled in by ticket.js -->
+    <section class="ticket glass" aria-label="Your conference ticket">
+
+      <!-- left side: logo, event info, avatar, name and github -->
+      <div class="ticket-main">
+        <img src="../assets/images/logo-full.svg" alt="Coding Conf" width="209" height="30">
+    <p class="ticket-meta">October 26, 2026 / Papine, Kgn</p>
+        <!-- person info, placeholder avatar gets replaced by the uploaded one -->
+        <div class="person">
+          <img id="t-avatar" src="../assets/images/image-avatar.jpg" alt="Your avatar" width="64" height="64">
+          <p class="person-name" id="t-name"></p>
+          <p class="person-github"><img src="../assets/images/icon-github.svg" alt="" width="16" height="16"> <a id="t-github" href="#"></a></p>
+        </div>
+
+      </div>
+
+
+      <!-- right side random ticket number made in validation.js -->
+      <p class="ticket-serial" id="t-serial" aria-label="Ticket number"></p>
+    </section>
+  </main>
+
+  <!-- footer same on every page -->
+  <footer class="site-footer">
+
+    <p>&copy; 2026 Coding Conf. CIT2011 IA#2.</p>
+  </footer>
+  <!-- ticket.js fills the ticket or sends the user back to index.html if there is no saved data -->
+  <script src="../js/ticket.js"></script>
+</body>
+</html>

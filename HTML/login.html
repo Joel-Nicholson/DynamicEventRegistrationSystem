@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Coding Conf 2026 | Register</title>
+</head>
+
+<body>
+  <!-- skip link so keyboard users can jump straight past the header again -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- header with the logo and the nav links again -->
+  <header class="site-header">
+
+    <a href="index.html" aria-label="Coding Conf home">
+      <img src="../assets/images/logo-full.svg" alt="Coding Conf" width="209" height="30">
+    </a>
+    <!--actual main navigation again -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li> <li><a href="login.html">Register</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main part of the page, the skip link jumps here Again -->
+  <main id="main" class="page">
+
+    <!-- heading and a little intro thing for the form -->
+    <section class="hero" aria-labelledby="form-title">
+      <h1 id="form-title">Your Journey to Coding Conf 2026 Starts Here!</h1>
+      <p class="lead">Secure your spot at next year's biggest coding conference.</p>
+
+    </section>
+
+    <!-- registration form, novalidate because validation.js is checking it so yea -->
+    <section aria-label="Registration form">
+      <form id="reg-form" class="form" novalidate>
+
+
+      
+        <!-- avatar upload: label is the drop zone, the real file input is hidden but still would focus on the keyboard -->
+        <div class="field">
+          <label for="avatar">Upload Avatar</label>
+      <label class="dropzone" for="avatar">
+            <img id="avatar-preview" src="../assets/images/icon-upload.svg" alt="" width="40" height="40">
+            <span id="dropzone-text">Drag and drop or click to upload</span>
+          </label>
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="visually-hidden" aria-describedby="avatar-hint avatar-error">
+      <!-- hint thing for the rules, error message gets filled in it by validation.js -->
+      <p class="hint" id="avatar-hint"><img src="../assets/images/icon-info.svg" alt="" width="16" height="16">Upload your photo (JPG or PNG, max size: 500KB).</p>
+          <p class="error" id="avatar-error" role="alert"></p>
+        </div>
+
+
+        <!-- full name field -->
+        <div class="field">
+       <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Name your parents came up with" autocomplete="name" aria-describedby="name-error">
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+
+        <!-- email field, checked with a regex in the validation.js -->
+        <div class="field">
+          <label for="email">Email Address</label>
+       <input type="text" id="email" name="email" placeholder="example@email.com" autocomplete="email" aria-describedby="email-error">
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+
+        <!-- github username field, has to start with @ or it gonna give an error thing -->
+        <div class="field">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" name="github" placeholder="@yourusername (make sure you have the @ at the front too)" aria-describedby="github-error">
+  <p class="error" id="github-error" role="alert"></p>
+        </div>
+
+        <!-- submit button, the submit event is caught in validation.js -->
+        <button type="submit" class="btn">Generate My Ticket</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- footer same on every page -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Coding Conf. CIT2011 IA#2.</p>
+  </footer>
+  <!-- script goes last so the form is already loaded when it runs -->
+  <script src="../js/validation.js"></script>
+</body>
+</html>
